@@ -5,10 +5,13 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v6.0.0
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      - name: Install Bats testing framework
+        run: npm install -g bats
+      - name: Display Bats version
+        run: bats -v
