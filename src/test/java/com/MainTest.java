@@ -1,6 +1,6 @@
 package com;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class MainTest {
 	void test() {
 		Main main = new Main();
 		int result = main.add(1, 1);
-		assertEquals(1, result);
+		assertEquals(2, result);
 	}
 
 }
