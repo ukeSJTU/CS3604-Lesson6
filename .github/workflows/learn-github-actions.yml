@@ -27,3 +27,7 @@ jobs:
           echo "::notice title=Bats Version::$VERSION"
       - name: Debug GitHub Context
         uses: hmarr/debug-action@v3
+      - name: Hello World
+        uses: actions/hello-world-javascript-action@v1
+        with:
+            who-to-greet: 'GitHub Actions Learner'
