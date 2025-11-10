@@ -25,3 +25,5 @@ jobs:
         run: |
           VERSION=$(bats -v)
           echo "::notice title=Bats Version::$VERSION"
+      - name: Debug GitHub Context
+        uses: hmarr/debug-action@v3
