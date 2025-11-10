@@ -17,6 +17,10 @@ jobs:
         run: |
           echo "### Bats Version Information" >> $GITHUB_STEP_SUMMARY
           bats -v >> $GITHUB_STEP_SUMMARY
+      - name: Display Node version
+        run: |
+          echo "### Node Version Information" >> $GITHUB_STEP_SUMMARY
+          node --version >> $GITHUB_STEP_SUMMARY
       - name: Check Bats version with annotations
         run: |
           VERSION=$(bats -v)
