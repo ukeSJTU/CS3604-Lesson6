@@ -17,3 +17,7 @@ jobs:
         run: |
           echo "### Bats Version Information" >> $GITHUB_STEP_SUMMARY
           bats -v >> $GITHUB_STEP_SUMMARY
+      - name: Check Bats version with annotations
+        run: |
+          VERSION=$(bats -v)
+          echo "::notice title=Bats Version::$VERSION"
