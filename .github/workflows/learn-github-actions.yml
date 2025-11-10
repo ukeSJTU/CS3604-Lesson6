@@ -14,4 +14,6 @@ jobs:
       - name: Install Bats testing framework
         run: npm install -g bats
       - name: Display Bats version
-        run: bats -v
+        run: |
+          echo "### Bats Version Information" >> $GITHUB_STEP_SUMMARY
+          bats -v >> $GITHUB_STEP_SUMMARY
